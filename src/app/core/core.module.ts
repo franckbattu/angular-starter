@@ -3,11 +3,11 @@ import { MaterialModule } from './material.module';
 import { RoutePipe } from "./routing/routing.pipe";
 
 const modules = [
-  MaterialModule
+  MaterialModule,
 ];
 
 const pipes = [
-  RoutePipe
+  RoutePipe,
 ]
 
 @NgModule({
@@ -15,11 +15,11 @@ const pipes = [
     ...pipes,
   ],
   imports: [
-    ...modules
+    ...modules,
   ],
   exports: [
     ...modules,
-    ...pipes
-  ]
+    ...pipes,
+  ],
 })
 export class CoreModule {}

@@ -6,5 +6,5 @@ export interface AppRoute extends Route {
 
 export interface UrlCommandRoute {
   route: string;
-  params?: Record<string, any>;
+  params?: Record<string, string | number>;
 }

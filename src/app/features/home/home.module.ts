@@ -3,7 +3,7 @@ import { HomeComponent } from "./home.component";
 
 @NgModule({
   declarations: [
-    HomeComponent
-  ]
+    HomeComponent,
+  ],
 })
 export class HomeModule {}

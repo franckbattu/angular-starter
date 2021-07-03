@@ -4,15 +4,15 @@ import { AppRoute } from './core/routing/routing.model';
 import { HomeComponent } from './features/home/home.component';
 
 const routes: AppRoute[] = [
-  { path: '', component: HomeComponent, name: 'home' }
+  { path: '', component: HomeComponent, name: 'home' },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   exports: [
-    RouterModule
-  ]
+    RouterModule,
+  ],
 })
 export class AppRoutingModule { }

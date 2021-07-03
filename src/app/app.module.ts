@@ -21,10 +21,10 @@ import { CoreModule } from './core/core.module';
     RendererModule.forRoot(),
     TransferHttpCacheModule,
     BrowserAnimationsModule,
-    CoreModule
+    CoreModule,
   ],
   bootstrap: [
-    AppComponent
-  ]
+    AppComponent,
+  ],
 })
 export class AppModule {}

@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-console */
+
 import { Engine } from '@nguniversal/common/clover/server';
 import * as express from 'express';
 import { join } from 'path';
@@ -14,11 +17,6 @@ app.get('*.*', express.static(DIST, {
   maxAge: '1y',
   fallthrough: false,
 }));
-
-// When using localization enable the below to redirect to a default locale
-// app.get(/^(\/|\/favicon\.ico)$/, (req, res) => {
-//   res.redirect(301, `/en-US${req.originalUrl}`);
-// });
 
 const ssrEngine = new Engine();
 app.get('*', (req, res, next) => {

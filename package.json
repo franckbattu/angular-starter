@@ -5,14 +5,16 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:client-and-server": "ng build test-angular && ng run test-angular:server",
+    "build:server": "ng run test-angular:server",
     "watch": "ng build --watch --configuration development",
+    "prerender": "ng run test-angular:prerender",
+    "serve:ssr": "node dist/test-angular/server/main.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cc": "jest --coverage",
-    "prerender": "ng run test-angular:prerender",
-    "build:client-and-server": "ng build test-angular && ng run test-angular:server",
-    "build:server": "ng run test-angular:server",
-    "serve:ssr": "node dist/test-angular/server/main.js"
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +32,6 @@
     "@ngrx/store": "^12.1.0",
     "@nguniversal/common": "^12.0.2",
     "express": "^4.15.2",
-    "jest-preset-angular": "^9.0.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
@@ -43,7 +44,10 @@
     "@types/express": "^4.17.0",
     "@types/jest": "^26.0.23",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
     "jest": "^27.0.5",
+    "jest-preset-angular": "^9.0.4",
     "typescript": "~4.2.3"
   }
 }

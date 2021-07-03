@@ -3,7 +3,7 @@ import { HomeModule } from "./home/home.module";
 
 @NgModule({
   imports: [
-    HomeModule
-  ]
+    HomeModule,
+  ],
 })
 export class FeaturesModule {}

@@ -8,15 +8,15 @@ const modules = [
   MatMenuModule,
   MatToolbarModule,
   MatIconModule,
-  MatButtonModule
+  MatButtonModule,
 ];
 
 @NgModule({
   imports: [
-    ...modules
+    ...modules,
   ],
   exports: [
-    ...modules
-  ]
+    ...modules,
+  ],
 })
 export class MaterialModule {}
