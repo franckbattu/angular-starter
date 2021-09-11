@@ -1,0 +1,10 @@
+<ng-container *ngIf="messages$ | async as messages">
+  <div class="alert alert-success" *ngFor="let message of messages[messageType.MSG_TYPE_CONFIRMATION]">
+    {{ message }}
+  </div>
+
+  <div class="alert alert-danger" *ngFor="let message of messages[messageType.MSG_TYPE_ERROR]">
+    {{ message }}
+  </div>
+
+</ng-container>

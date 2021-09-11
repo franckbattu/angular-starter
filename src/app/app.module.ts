@@ -10,6 +10,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SharedModule } from './shared/shared.module';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { FeaturesModule } from './features/features.module';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -25,10 +27,14 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     RendererModule.forRoot(),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25
+    }),
     TransferHttpCacheModule,
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
+    FeaturesModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
